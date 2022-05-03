@@ -1,0 +1,31 @@
+# Spring
+spring:
+  # MVC
+  mvc:
+    servlet:
+      path: /biblioteca
+  # Datasource
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/curso_spring_microservicios?serverTimezone=UTC
+    username: root
+    password: admin
+  # Hibernate
+  jpa:
+    hibernate:
+      naming:
+        implicit-strategy: org.hibernate.boot.model.naming.ImplicitNamingStrategyLegacyJpaImpl
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+# netflix-eureka-client
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka
+  instance:
+    instance-id: instCursos1
+# Actuator
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"

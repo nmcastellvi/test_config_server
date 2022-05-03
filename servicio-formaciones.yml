@@ -1,0 +1,14 @@
+# Server
+server:
+  port: 8081
+# Spring
+spring:
+  # MVC
+  mvc:
+    servlet:
+      path: /aula
+# netflix-eureka-client
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka
