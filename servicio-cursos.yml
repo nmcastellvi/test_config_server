@@ -7,7 +7,7 @@ spring:
   # Datasource
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://172.26.208.1:3306/curso_spring_microservicios?serverTimezone=UTC
+    url: jdbc:mysql://172.18.2.140:3306/curso_spring_microservicios?serverTimezone=UTC
     username: root
     password: admin
   # Hibernate
@@ -20,7 +20,7 @@ spring:
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://172.26.208.1:8761/eureka
+      defaultZone: http://172.18.2.140:8761/eureka
   instance:
     instance-id: instCursos1
 # Actuator
