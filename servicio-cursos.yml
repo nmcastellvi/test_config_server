@@ -4,18 +4,25 @@ spring:
   mvc:
     servlet:
       path: /biblioteca
-  # Datasource
+    # Datasource
   datasource:
-    driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://172.18.2.140:3306/curso_spring_microservicios?serverTimezone=UTC
-    username: root
-    password: admin
+    #driver-class-name: com.mysql.cj.jdbc.Driver
+    #url: jdbc:mysql://localhost:3306/curso_spring_microservicios?serverTimezone=UTC
+    #username: root
+    #password: admin
+    url: jdbc:h2:mem:mydb
+    username: sa
+    password: password
+    driverClassName: org.h2.Driver
   # Hibernate
   jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
     hibernate:
       naming:
         implicit-strategy: org.hibernate.boot.model.naming.ImplicitNamingStrategyLegacyJpaImpl
         physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+  h2:
+    console.enabled: true 
 # netflix-eureka-client
 eureka:
   client:
