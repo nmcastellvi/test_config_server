@@ -1,3 +1,6 @@
+# Server
+server:
+  port: 9000
 # Spring
 spring:
   # MVC
